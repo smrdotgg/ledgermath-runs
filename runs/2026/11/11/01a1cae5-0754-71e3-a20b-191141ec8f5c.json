@@ -1,0 +1,528 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1cae5-0754-71e3-a20b-191141ec8f5c",
+  "boot": "4dc7476b-05df-45ec-9e15-91eb0fcb1361",
+  "started_at": "2026-11-11T13:56:09.684069121Z",
+  "ended_at": "2026-11-11T13:56:39.269689452Z",
+  "benchmark": "disk_write",
+  "params": {
+    "disk": "root_volume",
+    "dir": "/var/tmp/ledgermath/disk",
+    "request_bytes": 8192,
+    "sync": "fdatasync",
+    "file_bytes": 1073741824
+  },
+  "samples": 10,
+  "source_commit": "c710c680827f7977188f14e9fa1617df43ad27ac",
+  "source": "sha256:9ad392b8ec7c337c986a6535f10eb74bd64e0d997c657c2af72f85c63dcd0219",
+  "binary": {
+    "blob": "sha256:dae8af9ea5c7321bfceef22dfe82659010d33b49e24e0367c5c7b6af6874bb8b",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/disk_write disk_write.c ../harness/c/lm.c ../harness/c/lm_event.c ../harness/c/lm_disk.c",
+    "resolved_flags": "sha256:5bca088f7256d311399c93b9f569b2340b770548beea3797ec4754adbcd12785"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "i4i.2xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-056871645a11fee03"
+  },
+  "environment": {
+    "before": "sha256:3b97817d9f4fcd8053db83e309449069519534b878fc71a77e2182d5fae5c6ef",
+    "after": "sha256:2c17fc7c749262cee65f8bc175d8281ee6e83ebc5d2682449c96d25c237a83da"
+  },
+  "runner": "sha256:4d5c48723435fff4ef6d968955bf9086042f6f1d2e8954287e5f1dad3152568d",
+  "exit": {
+    "code": 0
+  },
+  "events": [
+    {
+      "event": "started",
+      "t": 772401609492,
+      "schema": "ledgermath.events/1",
+      "wall_utc": "2026-11-11T13:56:09.705114907Z",
+      "clock": "CLOCK_MONOTONIC_RAW",
+      "clock_read_ns": 20.0,
+      "quick": false
+    },
+    {
+      "event": "observed",
+      "t": 779593247840,
+      "values": {
+        "file_path": "/var/tmp/ledgermath/disk/ledgermath-disk_write.scratch",
+        "file_device": "259:2",
+        "device_found": true,
+        "device_from": "st_dev",
+        "block_device": "nvme0n1p1",
+        "disk_device": "nvme0n1",
+        "disk_controller": "nvme0",
+        "disk_model": "Amazon Elastic Block Store",
+        "disk_serial": "vol0b1eb9616640c85a8",
+        "disk_firmware": "2.0",
+        "disk_bytes": 8589934592,
+        "logical_block_size": 512,
+        "physical_block_size": 4096,
+        "write_cache": "write through",
+        "fua": 0,
+        "max_sectors_kb": 256,
+        "max_hw_sectors_kb": 256,
+        "read_ahead_kb": 128,
+        "nr_requests": 63,
+        "scheduler": "[none] mq-deadline kyber bfq",
+        "rotational": 0,
+        "nomerges": 0,
+        "fs_type": "xfs",
+        "mount_point": "/",
+        "mount_source": "/dev/nvme0n1p1",
+        "mount_options": "rw,noatime",
+        "super_options": "rw,seclabel,attr2,inode64,logbufs=8,logbsize=32k,sunit=1024,swidth=1024,noquota",
+        "o_direct": false,
+        "statx_mask": "0x3fff",
+        "dio_offset_align": 512,
+        "dio_mem_align": 4,
+        "file_mtime": "2026-11-11T13:56:16.884887347Z",
+        "file_birth": "2026-11-11T13:56:09.695033030Z",
+        "file_bytes": 1073741824,
+        "fiemap": true,
+        "file_extents": 1,
+        "file_unwritten_extents": 0,
+        "file_delalloc_extents": 0,
+        "file_mapped_bytes": 1073741824,
+        "file_resident_pages": 2,
+        "page_bytes": 4096,
+        "request_bytes": 8192,
+        "sync_call": "fdatasync",
+        "bytes_per_repetition": 8192
+      }
+    },
+    {
+      "event": "sample_started",
+      "t": 779596465196,
+      "sample": 0,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 779597127902,
+      "sample": 0
+    },
+    {
+      "event": "sample_started",
+      "t": 779597129777,
+      "sample": 1,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 779597723885,
+      "sample": 1
+    },
+    {
+      "event": "sample_started",
+      "t": 779597725082,
+      "sample": 2,
+      "warmup": true,
+      "repetitions": 2
+    },
+    {
+      "event": "sample_ended",
+      "t": 779598980750,
+      "sample": 2
+    },
+    {
+      "event": "sample_started",
+      "t": 779598981649,
+      "sample": 3,
+      "warmup": true,
+      "repetitions": 4
+    },
+    {
+      "event": "sample_ended",
+      "t": 779601696703,
+      "sample": 3
+    },
+    {
+      "event": "sample_started",
+      "t": 779601697851,
+      "sample": 4,
+      "warmup": true,
+      "repetitions": 8
+    },
+    {
+      "event": "sample_ended",
+      "t": 779607626176,
+      "sample": 4
+    },
+    {
+      "event": "sample_started",
+      "t": 779607627214,
+      "sample": 5,
+      "warmup": true,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 779620550555,
+      "sample": 5
+    },
+    {
+      "event": "sample_started",
+      "t": 779620551833,
+      "sample": 6,
+      "warmup": true,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 779648756617,
+      "sample": 6
+    },
+    {
+      "event": "sample_started",
+      "t": 779648757845,
+      "sample": 7,
+      "warmup": true,
+      "repetitions": 64
+    },
+    {
+      "event": "sample_ended",
+      "t": 779706545126,
+      "sample": 7
+    },
+    {
+      "event": "sample_started",
+      "t": 779706547042,
+      "sample": 8,
+      "warmup": true,
+      "repetitions": 128
+    },
+    {
+      "event": "sample_ended",
+      "t": 779822673182,
+      "sample": 8
+    },
+    {
+      "event": "sample_started",
+      "t": 779822675080,
+      "sample": 9,
+      "warmup": true,
+      "repetitions": 256
+    },
+    {
+      "event": "sample_ended",
+      "t": 780056192170,
+      "sample": 9
+    },
+    {
+      "event": "sample_started",
+      "t": 780056199625,
+      "sample": 10,
+      "warmup": true,
+      "repetitions": 512
+    },
+    {
+      "event": "sample_ended",
+      "t": 780523403197,
+      "sample": 10
+    },
+    {
+      "event": "sample_started",
+      "t": 780523409792,
+      "sample": 11,
+      "warmup": true,
+      "repetitions": 1024
+    },
+    {
+      "event": "sample_ended",
+      "t": 781449063108,
+      "sample": 11
+    },
+    {
+      "event": "sample_started",
+      "t": 781449067911,
+      "sample": 12,
+      "warmup": true,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 783302343320,
+      "sample": 12
+    },
+    {
+      "event": "sample_started",
+      "t": 783302358807,
+      "sample": 13,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 785170296098,
+      "sample": 13
+    },
+    {
+      "event": "sample_started",
+      "t": 785170301878,
+      "sample": 14,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 787040036582,
+      "sample": 14
+    },
+    {
+      "event": "sample_started",
+      "t": 787040041547,
+      "sample": 15,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 788909118086,
+      "sample": 15
+    },
+    {
+      "event": "sample_started",
+      "t": 788909123925,
+      "sample": 16,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 790778007230,
+      "sample": 16
+    },
+    {
+      "event": "sample_started",
+      "t": 790778013106,
+      "sample": 17,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 792648558818,
+      "sample": 17
+    },
+    {
+      "event": "sample_started",
+      "t": 792648564090,
+      "sample": 18,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 794518450866,
+      "sample": 18
+    },
+    {
+      "event": "sample_started",
+      "t": 794518461079,
+      "sample": 19,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 796378180714,
+      "sample": 19
+    },
+    {
+      "event": "sample_started",
+      "t": 796378189728,
+      "sample": 20,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 798238990488,
+      "sample": 20
+    },
+    {
+      "event": "sample_started",
+      "t": 798238997842,
+      "sample": 21,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 800094739181,
+      "sample": 21
+    },
+    {
+      "event": "sample_started",
+      "t": 800094744957,
+      "sample": 22,
+      "warmup": false,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 801952942000,
+      "sample": 22
+    },
+    {
+      "event": "verified",
+      "t": 801952947640,
+      "checksum": "0xab781ee0c936556c"
+    },
+    {
+      "event": "device_counters",
+      "t": 801953010431,
+      "interval": "lm_measure",
+      "device_found": true,
+      "disk_device": "nvme0n1",
+      "stat": "/sys/class/block/nvme0n1/stat",
+      "change": {
+        "reads": 0,
+        "read_merges": 0,
+        "read_sectors": 0,
+        "read_ticks_ms": 0,
+        "writes": 24625,
+        "write_merges": 13,
+        "write_sectors": 403400,
+        "write_ticks_ms": 22219,
+        "io_ticks_ms": 22070,
+        "time_in_queue_ms": 22219,
+        "discards": 0,
+        "discard_merges": 0,
+        "discard_sectors": 0,
+        "discard_ticks_ms": 0,
+        "flushes": 0,
+        "flush_ticks_ms": 0
+      },
+      "in_flight_before": 0,
+      "in_flight_after": 0,
+      "before": [
+        197595,
+        68,
+        10707422,
+        2386905,
+        14258,
+        3207,
+        5890409,
+        64450,
+        0,
+        87550,
+        2451355,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "after": [
+        197595,
+        68,
+        10707422,
+        2386905,
+        38883,
+        3220,
+        6293809,
+        86669,
+        0,
+        109620,
+        2473574,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "partition": {
+        "block_device": "nvme0n1p1",
+        "stat": "/sys/class/block/nvme0n1p1/stat",
+        "change": {
+          "reads": 0,
+          "read_merges": 0,
+          "read_sectors": 0,
+          "read_ticks_ms": 0,
+          "writes": 24625,
+          "write_merges": 13,
+          "write_sectors": 403400,
+          "write_ticks_ms": 22219,
+          "io_ticks_ms": 22110,
+          "time_in_queue_ms": 22219,
+          "discards": 0,
+          "discard_merges": 0,
+          "discard_sectors": 0,
+          "discard_ticks_ms": 0,
+          "flushes": 0,
+          "flush_ticks_ms": 0
+        },
+        "in_flight_before": 0,
+        "in_flight_after": 0,
+        "before": [
+          197310,
+          56,
+          10700638,
+          2386736,
+          14257,
+          3207,
+          5890408,
+          64449,
+          0,
+          88570,
+          2451185,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "after": [
+          197310,
+          56,
+          10700638,
+          2386736,
+          38882,
+          3220,
+          6293808,
+          86668,
+          0,
+          110680,
+          2473404,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "file_resident_pages": 49154
+    },
+    {
+      "event": "work",
+      "t": 801958006892,
+      "writes": 24577,
+      "writes_checked_before_measuring": 1,
+      "fdatasyncs": 24577,
+      "bytes_written": 201334784,
+      "file_passes": 0
+    },
+    {
+      "event": "finished",
+      "t": 801966569433
+    }
+  ],
+  "stdout": "sha256:8e32756bcd756f6f173e48c45943bcd58cc7e853df7c3758a51bd6c56e8d1eb0",
+  "stderr": "sha256:b7b615deea0eefce804324714a1e635ac55d13152bb17bad5b9c7177aa406221"
+}
