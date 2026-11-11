@@ -1,0 +1,275 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1cb73-19c4-7690-afa3-e147c90075a1",
+  "boot": "74e6bd34-a8d0-4a3f-8201-de7d6bd65db6",
+  "started_at": "2026-11-11T16:31:20.516301532Z",
+  "ended_at": "2026-11-11T16:31:42.722551524Z",
+  "benchmark": "memory_read",
+  "params": {
+    "size_bytes": 1073741824,
+    "threads": 1,
+    "path": "avx2"
+  },
+  "samples": 10,
+  "source_commit": "c710c680827f7977188f14e9fa1617df43ad27ac",
+  "source": "sha256:9ad392b8ec7c337c986a6535f10eb74bd64e0d997c657c2af72f85c63dcd0219",
+  "binary": {
+    "blob": "sha256:23ec7e713532ab6ddf287791b6779d57ff9cf899b9c23f1f3068028a7812f7a7",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/memory_read memory_read.c ../harness/c/lm.c -pthread",
+    "resolved_flags": "sha256:390ec72d15b1354f671fcb7c256ebfa42b511b55904ae9572358e32f75ff0587"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "c8i.2xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-0f9e5ba52ca2082bb"
+  },
+  "environment": {
+    "before": "sha256:2e905901f8d46f72c8e5e26b99a05afb86873176ad07b876c6a5b3c5d9686391",
+    "after": "sha256:012abc41529ae0baa0659182be5ae93f8dfa7c8582413c923b06048e43967c81"
+  },
+  "runner": "sha256:4d5c48723435fff4ef6d968955bf9086042f6f1d2e8954287e5f1dad3152568d",
+  "exit": {
+    "code": 0
+  },
+  "events": [
+    {
+      "event": "started",
+      "t": 65075764470,
+      "schema": "ledgermath.events/1",
+      "wall_utc": "2026-11-11T16:31:20.538468403Z",
+      "clock": "CLOCK_MONOTONIC_RAW",
+      "clock_read_ns": 21.018,
+      "quick": false
+    },
+    {
+      "event": "observed",
+      "t": 65410087759,
+      "values": {
+        "bytes_per_repetition": 1073741824,
+        "threads_used": 1,
+        "path_taken": "avx2"
+      }
+    },
+    {
+      "event": "sample_started",
+      "t": 65410099174,
+      "sample": 0,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 65465449190,
+      "sample": 0
+    },
+    {
+      "event": "sample_started",
+      "t": 65465459095,
+      "sample": 1,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 65521038509,
+      "sample": 1
+    },
+    {
+      "event": "sample_started",
+      "t": 65521047004,
+      "sample": 2,
+      "warmup": true,
+      "repetitions": 2
+    },
+    {
+      "event": "sample_ended",
+      "t": 65636435198,
+      "sample": 2
+    },
+    {
+      "event": "sample_started",
+      "t": 65636451188,
+      "sample": 3,
+      "warmup": true,
+      "repetitions": 4
+    },
+    {
+      "event": "sample_ended",
+      "t": 65891945294,
+      "sample": 3
+    },
+    {
+      "event": "sample_started",
+      "t": 65891962003,
+      "sample": 4,
+      "warmup": true,
+      "repetitions": 8
+    },
+    {
+      "event": "sample_ended",
+      "t": 66344490060,
+      "sample": 4
+    },
+    {
+      "event": "sample_started",
+      "t": 66344503065,
+      "sample": 5,
+      "warmup": true,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 67241983006,
+      "sample": 5
+    },
+    {
+      "event": "sample_started",
+      "t": 67241998411,
+      "sample": 6,
+      "warmup": true,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 69060361763,
+      "sample": 6
+    },
+    {
+      "event": "sample_started",
+      "t": 69060397608,
+      "sample": 7,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 70909703150,
+      "sample": 7
+    },
+    {
+      "event": "sample_started",
+      "t": 70909719211,
+      "sample": 8,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 72708581436,
+      "sample": 8
+    },
+    {
+      "event": "sample_started",
+      "t": 72708596181,
+      "sample": 9,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 74522865667,
+      "sample": 9
+    },
+    {
+      "event": "sample_started",
+      "t": 74522881581,
+      "sample": 10,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 76359995809,
+      "sample": 10
+    },
+    {
+      "event": "sample_started",
+      "t": 76360011737,
+      "sample": 11,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 78186981032,
+      "sample": 11
+    },
+    {
+      "event": "sample_started",
+      "t": 78186996136,
+      "sample": 12,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 79998852874,
+      "sample": 12
+    },
+    {
+      "event": "sample_started",
+      "t": 79998867544,
+      "sample": 13,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 81822471027,
+      "sample": 13
+    },
+    {
+      "event": "sample_started",
+      "t": 81822486453,
+      "sample": 14,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 83611150327,
+      "sample": 14
+    },
+    {
+      "event": "sample_started",
+      "t": 83611165464,
+      "sample": 15,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 85428683540,
+      "sample": 15
+    },
+    {
+      "event": "sample_started",
+      "t": 85428697924,
+      "sample": 16,
+      "warmup": false,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 87237553040,
+      "sample": 16
+    },
+    {
+      "event": "verified",
+      "t": 87237565836,
+      "checksum": "0x001ffffffc000000"
+    },
+    {
+      "event": "finished",
+      "t": 87259329889
+    }
+  ],
+  "stdout": "sha256:b500a1d3bb23d8285d3183d7376be5598f3f4114fafbd501d56f03de613f4a1b",
+  "stderr": "sha256:ae51514129a535270b7734994b96703cf873cdd3f4aef6a6119871882baea640"
+}

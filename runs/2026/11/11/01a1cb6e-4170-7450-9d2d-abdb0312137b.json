@@ -1,0 +1,465 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1cb6e-4170-7450-9d2d-abdb0312137b",
+  "boot": "7bed24f9-ce4a-437c-b33d-b49758b6ab34",
+  "started_at": "2026-11-11T16:26:02.992771322Z",
+  "ended_at": "2026-11-11T16:26:25.471031416Z",
+  "benchmark": "syscall",
+  "params": {
+    "call": "stat",
+    "path": "/tmp"
+  },
+  "samples": 10,
+  "source_commit": "c710c680827f7977188f14e9fa1617df43ad27ac",
+  "source": "sha256:9ad392b8ec7c337c986a6535f10eb74bd64e0d997c657c2af72f85c63dcd0219",
+  "binary": {
+    "blob": "sha256:ea9c3b1fc7d4a1fc650ea6654cebb0b5a6eb4577dd385af5d0047aac43260cb8",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/syscall syscall.c ../harness/c/lm.c -pthread",
+    "resolved_flags": "sha256:31d5e25f592533c25124e913ee13449f1309e20943cd6876c69438f3d64dd4dc"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "m5.large",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-0de5b7ceeadf501db"
+  },
+  "environment": {
+    "before": "sha256:a2a4b6a2b681e87b3efe569494f27411415c2f788250b7ac2f01207dcb3302b7",
+    "after": "sha256:1e7a6b663db6b7ec1064b7b38c31cb14203b1725fb6b4cf13e4304aad63cb0d1"
+  },
+  "runner": "sha256:4d5c48723435fff4ef6d968955bf9086042f6f1d2e8954287e5f1dad3152568d",
+  "exit": {
+    "code": 0
+  },
+  "events": [
+    {
+      "event": "started",
+      "t": 333567159420,
+      "schema": "ledgermath.events/1",
+      "wall_utc": "2026-11-11T16:26:03.016866081Z",
+      "clock": "CLOCK_MONOTONIC_RAW",
+      "clock_read_ns": 22.581,
+      "quick": false
+    },
+    {
+      "event": "observed",
+      "t": 333567281635,
+      "values": {
+        "call_made": "stat",
+        "path_fs_type": "0x1021994"
+      }
+    },
+    {
+      "event": "sample_started",
+      "t": 333567283806,
+      "sample": 0,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567284847,
+      "sample": 0
+    },
+    {
+      "event": "sample_started",
+      "t": 333567286372,
+      "sample": 1,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567287340,
+      "sample": 1
+    },
+    {
+      "event": "sample_started",
+      "t": 333567288614,
+      "sample": 2,
+      "warmup": true,
+      "repetitions": 2
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567290469,
+      "sample": 2
+    },
+    {
+      "event": "sample_started",
+      "t": 333567291618,
+      "sample": 3,
+      "warmup": true,
+      "repetitions": 4
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567295245,
+      "sample": 3
+    },
+    {
+      "event": "sample_started",
+      "t": 333567296355,
+      "sample": 4,
+      "warmup": true,
+      "repetitions": 8
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567303527,
+      "sample": 4
+    },
+    {
+      "event": "sample_started",
+      "t": 333567304635,
+      "sample": 5,
+      "warmup": true,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567318915,
+      "sample": 5
+    },
+    {
+      "event": "sample_started",
+      "t": 333567320131,
+      "sample": 6,
+      "warmup": true,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567348624,
+      "sample": 6
+    },
+    {
+      "event": "sample_started",
+      "t": 333567349793,
+      "sample": 7,
+      "warmup": true,
+      "repetitions": 64
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567406622,
+      "sample": 7
+    },
+    {
+      "event": "sample_started",
+      "t": 333567407741,
+      "sample": 8,
+      "warmup": true,
+      "repetitions": 128
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567521405,
+      "sample": 8
+    },
+    {
+      "event": "sample_started",
+      "t": 333567522595,
+      "sample": 9,
+      "warmup": true,
+      "repetitions": 256
+    },
+    {
+      "event": "sample_ended",
+      "t": 333567749638,
+      "sample": 9
+    },
+    {
+      "event": "sample_started",
+      "t": 333567750805,
+      "sample": 10,
+      "warmup": true,
+      "repetitions": 512
+    },
+    {
+      "event": "sample_ended",
+      "t": 333568205156,
+      "sample": 10
+    },
+    {
+      "event": "sample_started",
+      "t": 333568206429,
+      "sample": 11,
+      "warmup": true,
+      "repetitions": 1024
+    },
+    {
+      "event": "sample_ended",
+      "t": 333569123050,
+      "sample": 11
+    },
+    {
+      "event": "sample_started",
+      "t": 333569124704,
+      "sample": 12,
+      "warmup": true,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 333570941182,
+      "sample": 12
+    },
+    {
+      "event": "sample_started",
+      "t": 333570942416,
+      "sample": 13,
+      "warmup": true,
+      "repetitions": 4096
+    },
+    {
+      "event": "sample_ended",
+      "t": 333574592840,
+      "sample": 13
+    },
+    {
+      "event": "sample_started",
+      "t": 333574594778,
+      "sample": 14,
+      "warmup": true,
+      "repetitions": 8192
+    },
+    {
+      "event": "sample_ended",
+      "t": 333581868095,
+      "sample": 14
+    },
+    {
+      "event": "sample_started",
+      "t": 333581869482,
+      "sample": 15,
+      "warmup": true,
+      "repetitions": 16384
+    },
+    {
+      "event": "sample_ended",
+      "t": 333596418287,
+      "sample": 15
+    },
+    {
+      "event": "sample_started",
+      "t": 333596420187,
+      "sample": 16,
+      "warmup": true,
+      "repetitions": 32768
+    },
+    {
+      "event": "sample_ended",
+      "t": 333625510042,
+      "sample": 16
+    },
+    {
+      "event": "sample_started",
+      "t": 333625512021,
+      "sample": 17,
+      "warmup": true,
+      "repetitions": 65536
+    },
+    {
+      "event": "sample_ended",
+      "t": 333683834018,
+      "sample": 17
+    },
+    {
+      "event": "sample_started",
+      "t": 333683836171,
+      "sample": 18,
+      "warmup": true,
+      "repetitions": 131072
+    },
+    {
+      "event": "sample_ended",
+      "t": 333800219535,
+      "sample": 18
+    },
+    {
+      "event": "sample_started",
+      "t": 333800222122,
+      "sample": 19,
+      "warmup": true,
+      "repetitions": 262144
+    },
+    {
+      "event": "sample_ended",
+      "t": 334033764092,
+      "sample": 19
+    },
+    {
+      "event": "sample_started",
+      "t": 334033769954,
+      "sample": 20,
+      "warmup": true,
+      "repetitions": 524288
+    },
+    {
+      "event": "sample_ended",
+      "t": 334500340351,
+      "sample": 20
+    },
+    {
+      "event": "sample_started",
+      "t": 334500346714,
+      "sample": 21,
+      "warmup": true,
+      "repetitions": 1048576
+    },
+    {
+      "event": "sample_ended",
+      "t": 335432329225,
+      "sample": 21
+    },
+    {
+      "event": "sample_started",
+      "t": 335432339884,
+      "sample": 22,
+      "warmup": true,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 337296625342,
+      "sample": 22
+    },
+    {
+      "event": "sample_started",
+      "t": 337296648019,
+      "sample": 23,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 339167615675,
+      "sample": 23
+    },
+    {
+      "event": "sample_started",
+      "t": 339167625977,
+      "sample": 24,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 341038551807,
+      "sample": 24
+    },
+    {
+      "event": "sample_started",
+      "t": 341038563146,
+      "sample": 25,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 342912229864,
+      "sample": 25
+    },
+    {
+      "event": "sample_started",
+      "t": 342912239656,
+      "sample": 26,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 344786559920,
+      "sample": 26
+    },
+    {
+      "event": "sample_started",
+      "t": 344786580467,
+      "sample": 27,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 346653566764,
+      "sample": 27
+    },
+    {
+      "event": "sample_started",
+      "t": 346653578364,
+      "sample": 28,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 348526411192,
+      "sample": 28
+    },
+    {
+      "event": "sample_started",
+      "t": 348526421215,
+      "sample": 29,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 350400176637,
+      "sample": 29
+    },
+    {
+      "event": "sample_started",
+      "t": 350400187528,
+      "sample": 30,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 352274014148,
+      "sample": 30
+    },
+    {
+      "event": "sample_started",
+      "t": 352274024114,
+      "sample": 31,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 354147527089,
+      "sample": 31
+    },
+    {
+      "event": "sample_started",
+      "t": 354147535324,
+      "sample": 32,
+      "warmup": false,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 356020901844,
+      "sample": 32
+    },
+    {
+      "event": "verified",
+      "t": 356020913405,
+      "checksum": "0x000000032b80021d"
+    },
+    {
+      "event": "finished",
+      "t": 356020915292
+    }
+  ],
+  "stdout": "sha256:88f73dfde846e047b2d4b5b63b80399bc242c87fd13ba765cc4edad6c5cd42e4",
+  "stderr": "sha256:21a9e49a56567ecebe22f9a1c90eed86c08b91e8169e65ea1cfcaa191512a68d"
+}

@@ -1,0 +1,263 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1cb86-422c-7dd1-bacc-12c574f932a9",
+  "boot": "9b79993e-db98-41f7-9802-552c9f3fe9bc",
+  "started_at": "2026-11-11T16:52:16.044463852Z",
+  "ended_at": "2026-11-11T16:52:31.621379697Z",
+  "benchmark": "memory_read",
+  "params": {
+    "size_bytes": 1073741824,
+    "threads": 1,
+    "path": "avx2"
+  },
+  "samples": 10,
+  "source_commit": "c710c680827f7977188f14e9fa1617df43ad27ac",
+  "source": "sha256:9ad392b8ec7c337c986a6535f10eb74bd64e0d997c657c2af72f85c63dcd0219",
+  "binary": {
+    "blob": "sha256:a3674893a396548874757acdd23df1028ce8789a4a82e35e41b209205b88f5f2",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/memory_read memory_read.c ../harness/c/lm.c -pthread",
+    "resolved_flags": "sha256:5bca088f7256d311399c93b9f569b2340b770548beea3797ec4754adbcd12785"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "i4i.2xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-0b833a3617fdf7f84"
+  },
+  "environment": {
+    "before": "sha256:a69cec61704b916c1e982ee6287ee325a59ad7dfdcba2702a8f0e4d5757dd012",
+    "after": "sha256:72aba3099313fd9aeafb5c97be82e11611bf46f05df2267a55636de3c689e901"
+  },
+  "runner": "sha256:4d5c48723435fff4ef6d968955bf9086042f6f1d2e8954287e5f1dad3152568d",
+  "exit": {
+    "code": 0
+  },
+  "events": [
+    {
+      "event": "started",
+      "t": 119189604110,
+      "schema": "ledgermath.events/1",
+      "wall_utc": "2026-11-11T16:52:16.065435604Z",
+      "clock": "CLOCK_MONOTONIC_RAW",
+      "clock_read_ns": 19.81,
+      "quick": false
+    },
+    {
+      "event": "observed",
+      "t": 119576894288,
+      "values": {
+        "bytes_per_repetition": 1073741824,
+        "threads_used": 1,
+        "path_taken": "avx2"
+      }
+    },
+    {
+      "event": "sample_started",
+      "t": 119576906419,
+      "sample": 0,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 119655593952,
+      "sample": 0
+    },
+    {
+      "event": "sample_started",
+      "t": 119655606064,
+      "sample": 1,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 119733591198,
+      "sample": 1
+    },
+    {
+      "event": "sample_started",
+      "t": 119733602478,
+      "sample": 2,
+      "warmup": true,
+      "repetitions": 2
+    },
+    {
+      "event": "sample_ended",
+      "t": 119889253997,
+      "sample": 2
+    },
+    {
+      "event": "sample_started",
+      "t": 119889262549,
+      "sample": 3,
+      "warmup": true,
+      "repetitions": 4
+    },
+    {
+      "event": "sample_ended",
+      "t": 120203629002,
+      "sample": 3
+    },
+    {
+      "event": "sample_started",
+      "t": 120203644954,
+      "sample": 4,
+      "warmup": true,
+      "repetitions": 8
+    },
+    {
+      "event": "sample_ended",
+      "t": 120830290354,
+      "sample": 4
+    },
+    {
+      "event": "sample_started",
+      "t": 120830301786,
+      "sample": 5,
+      "warmup": true,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 122102047452,
+      "sample": 5
+    },
+    {
+      "event": "sample_started",
+      "t": 122102077799,
+      "sample": 6,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 123370869561,
+      "sample": 6
+    },
+    {
+      "event": "sample_started",
+      "t": 123370881310,
+      "sample": 7,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 124626166033,
+      "sample": 7
+    },
+    {
+      "event": "sample_started",
+      "t": 124626178668,
+      "sample": 8,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 125883291946,
+      "sample": 8
+    },
+    {
+      "event": "sample_started",
+      "t": 125883304082,
+      "sample": 9,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 127143160297,
+      "sample": 9
+    },
+    {
+      "event": "sample_started",
+      "t": 127143172995,
+      "sample": 10,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 128395359109,
+      "sample": 10
+    },
+    {
+      "event": "sample_started",
+      "t": 128395370222,
+      "sample": 11,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 129646403813,
+      "sample": 11
+    },
+    {
+      "event": "sample_started",
+      "t": 129646418213,
+      "sample": 12,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 130901517711,
+      "sample": 12
+    },
+    {
+      "event": "sample_started",
+      "t": 130901529878,
+      "sample": 13,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 132173587901,
+      "sample": 13
+    },
+    {
+      "event": "sample_started",
+      "t": 132173600673,
+      "sample": 14,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 133445506895,
+      "sample": 14
+    },
+    {
+      "event": "sample_started",
+      "t": 133445519360,
+      "sample": 15,
+      "warmup": false,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 134718068593,
+      "sample": 15
+    },
+    {
+      "event": "verified",
+      "t": 134718079634,
+      "checksum": "0x001ffffffc000000"
+    },
+    {
+      "event": "finished",
+      "t": 134745372914
+    }
+  ],
+  "stdout": "sha256:9c08b0ef2eed113545b77c91f54328c8375be2eab29e3064e9b18a4e14525b11",
+  "stderr": "sha256:77deb4ce166512452b80375839eb97e3eb4346694cd60f710731fcbc5a8916ec"
+}

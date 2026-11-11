@@ -1,0 +1,477 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1cb77-0875-7336-a532-e50273e45270",
+  "boot": "74e6bd34-a8d0-4a3f-8201-de7d6bd65db6",
+  "started_at": "2026-11-11T16:35:38.229114377Z",
+  "ended_at": "2026-11-11T16:35:52.717368760Z",
+  "benchmark": "syscall",
+  "params": {
+    "call": "stat",
+    "path": "/tmp"
+  },
+  "samples": 10,
+  "source_commit": "c710c680827f7977188f14e9fa1617df43ad27ac",
+  "source": "sha256:9ad392b8ec7c337c986a6535f10eb74bd64e0d997c657c2af72f85c63dcd0219",
+  "binary": {
+    "blob": "sha256:dd361a56ac7db911ecbfca8aca63b9cb2ca9185f371aeb25d8739f4397f46e14",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/syscall syscall.c ../harness/c/lm.c -pthread",
+    "resolved_flags": "sha256:390ec72d15b1354f671fcb7c256ebfa42b511b55904ae9572358e32f75ff0587"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "c8i.2xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-0f9e5ba52ca2082bb"
+  },
+  "environment": {
+    "before": "sha256:1238037f03a5060e4bfd2caa548fdac753756732859c2d892f66418d62bf72f8",
+    "after": "sha256:3219cc022460859487f688b04a64aa302c940d3d2f67e8677940da80a221583c"
+  },
+  "runner": "sha256:4d5c48723435fff4ef6d968955bf9086042f6f1d2e8954287e5f1dad3152568d",
+  "exit": {
+    "code": 0
+  },
+  "events": [
+    {
+      "event": "started",
+      "t": 322787286083,
+      "schema": "ledgermath.events/1",
+      "wall_utc": "2026-11-11T16:35:38.251321079Z",
+      "clock": "CLOCK_MONOTONIC_RAW",
+      "clock_read_ns": 21.018,
+      "quick": false
+    },
+    {
+      "event": "observed",
+      "t": 322787394596,
+      "values": {
+        "call_made": "stat",
+        "path_fs_type": "0x1021994"
+      }
+    },
+    {
+      "event": "sample_started",
+      "t": 322787395734,
+      "sample": 0,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787396131,
+      "sample": 0
+    },
+    {
+      "event": "sample_started",
+      "t": 322787397079,
+      "sample": 1,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787397446,
+      "sample": 1
+    },
+    {
+      "event": "sample_started",
+      "t": 322787397929,
+      "sample": 2,
+      "warmup": true,
+      "repetitions": 2
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787398601,
+      "sample": 2
+    },
+    {
+      "event": "sample_started",
+      "t": 322787399021,
+      "sample": 3,
+      "warmup": true,
+      "repetitions": 4
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787400289,
+      "sample": 3
+    },
+    {
+      "event": "sample_started",
+      "t": 322787400691,
+      "sample": 4,
+      "warmup": true,
+      "repetitions": 8
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787403074,
+      "sample": 4
+    },
+    {
+      "event": "sample_started",
+      "t": 322787403509,
+      "sample": 5,
+      "warmup": true,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787408204,
+      "sample": 5
+    },
+    {
+      "event": "sample_started",
+      "t": 322787408700,
+      "sample": 6,
+      "warmup": true,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787418172,
+      "sample": 6
+    },
+    {
+      "event": "sample_started",
+      "t": 322787418645,
+      "sample": 7,
+      "warmup": true,
+      "repetitions": 64
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787437420,
+      "sample": 7
+    },
+    {
+      "event": "sample_started",
+      "t": 322787437880,
+      "sample": 8,
+      "warmup": true,
+      "repetitions": 128
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787474949,
+      "sample": 8
+    },
+    {
+      "event": "sample_started",
+      "t": 322787475472,
+      "sample": 9,
+      "warmup": true,
+      "repetitions": 256
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787549654,
+      "sample": 9
+    },
+    {
+      "event": "sample_started",
+      "t": 322787550117,
+      "sample": 10,
+      "warmup": true,
+      "repetitions": 512
+    },
+    {
+      "event": "sample_ended",
+      "t": 322787698591,
+      "sample": 10
+    },
+    {
+      "event": "sample_started",
+      "t": 322787699120,
+      "sample": 11,
+      "warmup": true,
+      "repetitions": 1024
+    },
+    {
+      "event": "sample_ended",
+      "t": 322788000341,
+      "sample": 11
+    },
+    {
+      "event": "sample_started",
+      "t": 322788000911,
+      "sample": 12,
+      "warmup": true,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 322788585475,
+      "sample": 12
+    },
+    {
+      "event": "sample_started",
+      "t": 322788585933,
+      "sample": 13,
+      "warmup": true,
+      "repetitions": 4096
+    },
+    {
+      "event": "sample_ended",
+      "t": 322789768101,
+      "sample": 13
+    },
+    {
+      "event": "sample_started",
+      "t": 322789769045,
+      "sample": 14,
+      "warmup": true,
+      "repetitions": 8192
+    },
+    {
+      "event": "sample_ended",
+      "t": 322792123185,
+      "sample": 14
+    },
+    {
+      "event": "sample_started",
+      "t": 322792124132,
+      "sample": 15,
+      "warmup": true,
+      "repetitions": 16384
+    },
+    {
+      "event": "sample_ended",
+      "t": 322796823422,
+      "sample": 15
+    },
+    {
+      "event": "sample_started",
+      "t": 322796824687,
+      "sample": 16,
+      "warmup": true,
+      "repetitions": 32768
+    },
+    {
+      "event": "sample_ended",
+      "t": 322806228815,
+      "sample": 16
+    },
+    {
+      "event": "sample_started",
+      "t": 322806230166,
+      "sample": 17,
+      "warmup": true,
+      "repetitions": 65536
+    },
+    {
+      "event": "sample_ended",
+      "t": 322825060138,
+      "sample": 17
+    },
+    {
+      "event": "sample_started",
+      "t": 322825061138,
+      "sample": 18,
+      "warmup": true,
+      "repetitions": 131072
+    },
+    {
+      "event": "sample_ended",
+      "t": 322862734271,
+      "sample": 18
+    },
+    {
+      "event": "sample_started",
+      "t": 322862736307,
+      "sample": 19,
+      "warmup": true,
+      "repetitions": 262144
+    },
+    {
+      "event": "sample_ended",
+      "t": 322938093083,
+      "sample": 19
+    },
+    {
+      "event": "sample_started",
+      "t": 322938098275,
+      "sample": 20,
+      "warmup": true,
+      "repetitions": 524288
+    },
+    {
+      "event": "sample_ended",
+      "t": 323088693511,
+      "sample": 20
+    },
+    {
+      "event": "sample_started",
+      "t": 323088695772,
+      "sample": 21,
+      "warmup": true,
+      "repetitions": 1048576
+    },
+    {
+      "event": "sample_ended",
+      "t": 323389895404,
+      "sample": 21
+    },
+    {
+      "event": "sample_started",
+      "t": 323389896534,
+      "sample": 22,
+      "warmup": true,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 323992208119,
+      "sample": 22
+    },
+    {
+      "event": "sample_started",
+      "t": 323992209736,
+      "sample": 23,
+      "warmup": true,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 325198793497,
+      "sample": 23
+    },
+    {
+      "event": "sample_started",
+      "t": 325198828255,
+      "sample": 24,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 326404097671,
+      "sample": 24
+    },
+    {
+      "event": "sample_started",
+      "t": 326404100268,
+      "sample": 25,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 327612014950,
+      "sample": 25
+    },
+    {
+      "event": "sample_started",
+      "t": 327612017224,
+      "sample": 26,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 328820201650,
+      "sample": 26
+    },
+    {
+      "event": "sample_started",
+      "t": 328820208419,
+      "sample": 27,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 330023619674,
+      "sample": 27
+    },
+    {
+      "event": "sample_started",
+      "t": 330023621582,
+      "sample": 28,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 331226862730,
+      "sample": 28
+    },
+    {
+      "event": "sample_started",
+      "t": 331226864029,
+      "sample": 29,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 332431917574,
+      "sample": 29
+    },
+    {
+      "event": "sample_started",
+      "t": 332431919239,
+      "sample": 30,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 333638929227,
+      "sample": 30
+    },
+    {
+      "event": "sample_started",
+      "t": 333638932244,
+      "sample": 31,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 334845564203,
+      "sample": 31
+    },
+    {
+      "event": "sample_started",
+      "t": 334845566864,
+      "sample": 32,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 336048862360,
+      "sample": 32
+    },
+    {
+      "event": "sample_started",
+      "t": 336048866016,
+      "sample": 33,
+      "warmup": false,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 337252829329,
+      "sample": 33
+    },
+    {
+      "event": "verified",
+      "t": 337252830809,
+      "checksum": "0x000000065700021d"
+    },
+    {
+      "event": "finished",
+      "t": 337252832195
+    }
+  ],
+  "stdout": "sha256:db126530b9124edb514f9ac3ed7ce3ed2d0a396dd3c9e41a4bdf4cb501ba2c05",
+  "stderr": "sha256:fc8578c2e9f9a1ad3d3f0ca02fb56956cfad8cbb91a453e9cd3be527d4f392ba"
+}

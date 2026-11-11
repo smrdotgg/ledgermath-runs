@@ -1,0 +1,574 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1cb80-483b-775b-8fec-ac9b1a8e5d95",
+  "boot": "f53a12bc-d8d2-4fc8-b12b-b23c070d4242",
+  "started_at": "2026-11-11T16:45:44.379807330Z",
+  "ended_at": "2026-11-11T16:46:01.128966674Z",
+  "benchmark": "hash",
+  "params": {
+    "algorithm": "crc32",
+    "size_bytes": 64
+  },
+  "samples": 10,
+  "source_commit": "c710c680827f7977188f14e9fa1617df43ad27ac",
+  "source": "sha256:9ad392b8ec7c337c986a6535f10eb74bd64e0d997c657c2af72f85c63dcd0219",
+  "binary": {
+    "blob": "sha256:8d1f159998af3bef2034b2c1e45d85eca4f6c16aa3018ec3ea35a474a7df1721",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/hash hash.c ../harness/c/lm.c -pthread",
+    "resolved_flags": "sha256:6dd1c401b7e62f4b2f6e6b72dcfd685eee3fec3920ddeb68394c70b36304c2e7"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "c8a.2xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-0de2a73db1cdc1570"
+  },
+  "environment": {
+    "before": "sha256:4e0e44282cd671b11cbbb5a4fd675395d54a4584a4078698c956ab176818bb69",
+    "after": "sha256:209fdd111d2247e2327d3404cc22bf87ed3a0f49d9c72a26f255435dd4e289cb"
+  },
+  "runner": "sha256:4d5c48723435fff4ef6d968955bf9086042f6f1d2e8954287e5f1dad3152568d",
+  "exit": {
+    "code": 0
+  },
+  "events": [
+    {
+      "event": "started",
+      "t": 297491455739,
+      "schema": "ledgermath.events/1",
+      "wall_utc": "2026-11-11T16:45:44.399327222Z",
+      "clock": "CLOCK_MONOTONIC_RAW",
+      "clock_read_ns": 19.037,
+      "quick": false
+    },
+    {
+      "event": "observed",
+      "t": 297491491739,
+      "values": {
+        "bytes_per_repetition": 64,
+        "algorithm_run": "crc32c",
+        "path_taken": "sse4.2"
+      }
+    },
+    {
+      "event": "sample_started",
+      "t": 297491492669,
+      "sample": 0,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491492709,
+      "sample": 0
+    },
+    {
+      "event": "sample_started",
+      "t": 297491493539,
+      "sample": 1,
+      "warmup": true,
+      "repetitions": 1
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491493579,
+      "sample": 1
+    },
+    {
+      "event": "sample_started",
+      "t": 297491493989,
+      "sample": 2,
+      "warmup": true,
+      "repetitions": 2
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491494019,
+      "sample": 2
+    },
+    {
+      "event": "sample_started",
+      "t": 297491494319,
+      "sample": 3,
+      "warmup": true,
+      "repetitions": 4
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491494359,
+      "sample": 3
+    },
+    {
+      "event": "sample_started",
+      "t": 297491494669,
+      "sample": 4,
+      "warmup": true,
+      "repetitions": 8
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491494709,
+      "sample": 4
+    },
+    {
+      "event": "sample_started",
+      "t": 297491494999,
+      "sample": 5,
+      "warmup": true,
+      "repetitions": 16
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491495039,
+      "sample": 5
+    },
+    {
+      "event": "sample_started",
+      "t": 297491495399,
+      "sample": 6,
+      "warmup": true,
+      "repetitions": 32
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491495459,
+      "sample": 6
+    },
+    {
+      "event": "sample_started",
+      "t": 297491495739,
+      "sample": 7,
+      "warmup": true,
+      "repetitions": 64
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491495839,
+      "sample": 7
+    },
+    {
+      "event": "sample_started",
+      "t": 297491496129,
+      "sample": 8,
+      "warmup": true,
+      "repetitions": 128
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491496289,
+      "sample": 8
+    },
+    {
+      "event": "sample_started",
+      "t": 297491496629,
+      "sample": 9,
+      "warmup": true,
+      "repetitions": 256
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491496949,
+      "sample": 9
+    },
+    {
+      "event": "sample_started",
+      "t": 297491497269,
+      "sample": 10,
+      "warmup": true,
+      "repetitions": 512
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491497869,
+      "sample": 10
+    },
+    {
+      "event": "sample_started",
+      "t": 297491498219,
+      "sample": 11,
+      "warmup": true,
+      "repetitions": 1024
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491499399,
+      "sample": 11
+    },
+    {
+      "event": "sample_started",
+      "t": 297491499759,
+      "sample": 12,
+      "warmup": true,
+      "repetitions": 2048
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491502109,
+      "sample": 12
+    },
+    {
+      "event": "sample_started",
+      "t": 297491502409,
+      "sample": 13,
+      "warmup": true,
+      "repetitions": 4096
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491507089,
+      "sample": 13
+    },
+    {
+      "event": "sample_started",
+      "t": 297491507389,
+      "sample": 14,
+      "warmup": true,
+      "repetitions": 8192
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491516719,
+      "sample": 14
+    },
+    {
+      "event": "sample_started",
+      "t": 297491517009,
+      "sample": 15,
+      "warmup": true,
+      "repetitions": 16384
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491535659,
+      "sample": 15
+    },
+    {
+      "event": "sample_started",
+      "t": 297491535989,
+      "sample": 16,
+      "warmup": true,
+      "repetitions": 32768
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491573319,
+      "sample": 16
+    },
+    {
+      "event": "sample_started",
+      "t": 297491573629,
+      "sample": 17,
+      "warmup": true,
+      "repetitions": 65536
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491648189,
+      "sample": 17
+    },
+    {
+      "event": "sample_started",
+      "t": 297491648489,
+      "sample": 18,
+      "warmup": true,
+      "repetitions": 131072
+    },
+    {
+      "event": "sample_ended",
+      "t": 297491797689,
+      "sample": 18
+    },
+    {
+      "event": "sample_started",
+      "t": 297491798019,
+      "sample": 19,
+      "warmup": true,
+      "repetitions": 262144
+    },
+    {
+      "event": "sample_ended",
+      "t": 297492098329,
+      "sample": 19
+    },
+    {
+      "event": "sample_started",
+      "t": 297492098689,
+      "sample": 20,
+      "warmup": true,
+      "repetitions": 524288
+    },
+    {
+      "event": "sample_ended",
+      "t": 297492701359,
+      "sample": 20
+    },
+    {
+      "event": "sample_started",
+      "t": 297492701909,
+      "sample": 21,
+      "warmup": true,
+      "repetitions": 1048576
+    },
+    {
+      "event": "sample_ended",
+      "t": 297493895859,
+      "sample": 21
+    },
+    {
+      "event": "sample_started",
+      "t": 297493896189,
+      "sample": 22,
+      "warmup": true,
+      "repetitions": 2097152
+    },
+    {
+      "event": "sample_ended",
+      "t": 297496286289,
+      "sample": 22
+    },
+    {
+      "event": "sample_started",
+      "t": 297496286659,
+      "sample": 23,
+      "warmup": true,
+      "repetitions": 4194304
+    },
+    {
+      "event": "sample_ended",
+      "t": 297501063339,
+      "sample": 23
+    },
+    {
+      "event": "sample_started",
+      "t": 297501063699,
+      "sample": 24,
+      "warmup": true,
+      "repetitions": 8388608
+    },
+    {
+      "event": "sample_ended",
+      "t": 297510617008,
+      "sample": 24
+    },
+    {
+      "event": "sample_started",
+      "t": 297510617418,
+      "sample": 25,
+      "warmup": true,
+      "repetitions": 16777216
+    },
+    {
+      "event": "sample_ended",
+      "t": 297529739187,
+      "sample": 25
+    },
+    {
+      "event": "sample_started",
+      "t": 297529739647,
+      "sample": 26,
+      "warmup": true,
+      "repetitions": 33554432
+    },
+    {
+      "event": "sample_ended",
+      "t": 297567988435,
+      "sample": 26
+    },
+    {
+      "event": "sample_started",
+      "t": 297567989965,
+      "sample": 27,
+      "warmup": true,
+      "repetitions": 67108864
+    },
+    {
+      "event": "sample_ended",
+      "t": 297644388610,
+      "sample": 27
+    },
+    {
+      "event": "sample_started",
+      "t": 297644389150,
+      "sample": 28,
+      "warmup": true,
+      "repetitions": 134217728
+    },
+    {
+      "event": "sample_ended",
+      "t": 297797227351,
+      "sample": 28
+    },
+    {
+      "event": "sample_started",
+      "t": 297797227811,
+      "sample": 29,
+      "warmup": true,
+      "repetitions": 268435456
+    },
+    {
+      "event": "sample_ended",
+      "t": 298102825323,
+      "sample": 29
+    },
+    {
+      "event": "sample_started",
+      "t": 298102825773,
+      "sample": 30,
+      "warmup": true,
+      "repetitions": 536870912
+    },
+    {
+      "event": "sample_ended",
+      "t": 298714070396,
+      "sample": 30
+    },
+    {
+      "event": "sample_started",
+      "t": 298714070866,
+      "sample": 31,
+      "warmup": true,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 299937102383,
+      "sample": 31
+    },
+    {
+      "event": "sample_started",
+      "t": 299937104833,
+      "sample": 32,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 301365398748,
+      "sample": 32
+    },
+    {
+      "event": "sample_started",
+      "t": 301365399388,
+      "sample": 33,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 302793920683,
+      "sample": 33
+    },
+    {
+      "event": "sample_started",
+      "t": 302793921093,
+      "sample": 34,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 304222413148,
+      "sample": 34
+    },
+    {
+      "event": "sample_started",
+      "t": 304222413698,
+      "sample": 35,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 305650563853,
+      "sample": 35
+    },
+    {
+      "event": "sample_started",
+      "t": 305650564253,
+      "sample": 36,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 307078872698,
+      "sample": 36
+    },
+    {
+      "event": "sample_started",
+      "t": 307078873168,
+      "sample": 37,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 308507290873,
+      "sample": 37
+    },
+    {
+      "event": "sample_started",
+      "t": 308507291283,
+      "sample": 38,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 309935333038,
+      "sample": 38
+    },
+    {
+      "event": "sample_started",
+      "t": 309935333438,
+      "sample": 39,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 311363720802,
+      "sample": 39
+    },
+    {
+      "event": "sample_started",
+      "t": 311363721192,
+      "sample": 40,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 312792247447,
+      "sample": 40
+    },
+    {
+      "event": "sample_started",
+      "t": 312792247847,
+      "sample": 41,
+      "warmup": false,
+      "repetitions": 1073741824
+    },
+    {
+      "event": "sample_ended",
+      "t": 314220905082,
+      "sample": 41
+    },
+    {
+      "event": "verified",
+      "t": 314220905502,
+      "checksum": "0x00000000f8a5dd8c"
+    },
+    {
+      "event": "finished",
+      "t": 314220906872
+    }
+  ],
+  "stdout": "sha256:f70286633b23936a338b23b8a848c8475bd2f1ce2f0992688d076f645d6df43e",
+  "stderr": "sha256:ad0298ec3e0230b7e973b4983b0f71f1b9150bc2468a5e571fdcc076910956af"
+}
