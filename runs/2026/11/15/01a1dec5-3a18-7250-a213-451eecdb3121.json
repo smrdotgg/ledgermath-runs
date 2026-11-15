@@ -1,0 +1,43 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1dec5-3a18-7250-a213-451eecdb3121",
+  "boot": "c2d1ed28-f7b5-4641-8f5b-20f221c06a03",
+  "started_at": "2026-11-15T10:33:49.848780680Z",
+  "ended_at": "2026-11-15T10:34:08.860694322Z",
+  "benchmark": "compressed_memory_read",
+  "params": {
+    "blocks": 1000000,
+    "bits": 8
+  },
+  "samples": 10,
+  "source_commit": "50db33a0a1e4ead1c08346cc6b5e18bced5176f1",
+  "source": "sha256:2907ae7db933d0715da4fe9330c66f7572235355da5e1728065e5560a861698a",
+  "binary": {
+    "blob": "sha256:41f12429642020f4acf9ed23a6e12e00ff258c4fbdeb73eb2019f6bf9f2a352f",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/compressed_memory_read compressed_memory_read.c ../harness/c/lm.c -pthread",
+    "resolved_flags": "sha256:390ec72d15b1354f671fcb7c256ebfa42b511b55904ae9572358e32f75ff0587"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "c8i.2xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-005cd4e082aeb334d"
+  },
+  "environment": {
+    "before": "sha256:300f79a41941f4c2e763396f670291a124be481d328b014f548bcdde26cabb9f",
+    "after": "sha256:9fe15ae6cfbf48fa67f34524ca21d85f33b50bbd5983a48999f2a21a06bc72ea"
+  },
+  "runner": "sha256:5b3e1d9a5ffdf2e6ec2cafed38f3914da74b0760432f17bf479d897bd356b203",
+  "exit": {
+    "code": 0
+  },
+  "stdout": "sha256:f9daddd4410775fbf685602cd0d61e1333dbd5ce78c3e51aef2cef661e401d68",
+  "stdout_bytes": 5920,
+  "stdout_lines": 80,
+  "stderr": "sha256:47382580e95b1836537e999945e2bfb2b4d2fb49523abe425951139c62d7c59a"
+}
