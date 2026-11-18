@@ -1,0 +1,620 @@
+{
+  "schema": "ledgermath.boot/1",
+  "boot": "d544edad-270b-4abb-9de3-1bf7449b4077",
+  "provider": {
+    "name": "aws",
+    "instance_type": "c6i.8xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-0f01ccaf9447df49c"
+  },
+  "source_commit": "50db33a0a1e4ead1c08346cc6b5e18bced5176f1",
+  "source": "sha256:2907ae7db933d0715da4fe9330c66f7572235355da5e1728065e5560a861698a",
+  "runner": "sha256:5b3e1d9a5ffdf2e6ec2cafed38f3914da74b0760432f17bf479d897bd356b203",
+  "started_at": "2026-11-18T16:11:02.424034732Z",
+  "runs": [
+    {
+      "id": "01a1ef6d-0ae7-709d-a31f-97c109ba329f",
+      "benchmark": "memory_read",
+      "build": "static",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": 1,
+        "path": "scalar"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6d-5ae7-7769-952f-020f521921e2",
+      "benchmark": "memory_read",
+      "build": "dynamic",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": 1,
+        "path": "scalar"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6d-b126-77bc-975f-ed26661e8d6c",
+      "benchmark": "memory_read",
+      "build": "dynamic",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": 1,
+        "path": "avx2"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6d-fa16-7d05-b968-85ed226355c7",
+      "benchmark": "memory_read",
+      "build": "static",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": 1,
+        "path": "avx2"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6e-3fa2-7bd4-b091-87cc16d816f9",
+      "benchmark": "memory_read",
+      "build": "static",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": "all",
+        "path": "scalar"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6e-74c7-7e50-b5a2-0978c4a1f059",
+      "benchmark": "memory_read",
+      "build": "dynamic",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": "all",
+        "path": "scalar"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6e-d773-7130-8b62-3f5a72124c08",
+      "benchmark": "memory_read",
+      "build": "dynamic",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": "all",
+        "path": "avx2"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6f-33ad-7166-b35c-17cb35804df7",
+      "benchmark": "memory_read",
+      "build": "static",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": "all",
+        "path": "avx2"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6f-901d-7e45-ad17-5e27dc628754",
+      "benchmark": "compressed_memory_read",
+      "build": "static",
+      "params": {
+        "blocks": 1000000,
+        "bits": 8
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef6f-e719-75e7-b9a0-e8a6f210c11f",
+      "benchmark": "memory_read_random",
+      "build": "static",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": 1
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef70-24c3-7b08-8a67-6a9baca2066f",
+      "benchmark": "memory_write",
+      "build": "static",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": 1,
+        "order": "sequential"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef70-72cc-758c-8334-cacfd108f6e5",
+      "benchmark": "memory_write",
+      "build": "static",
+      "params": {
+        "size_bytes": 1073741824,
+        "threads": 1,
+        "order": "random"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef70-b72d-717e-80c2-f6b885b14606",
+      "benchmark": "syscall",
+      "build": "static",
+      "params": {
+        "call": "getpid"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef71-054a-7ec6-9ca4-fc0bcd71d097",
+      "benchmark": "syscall",
+      "build": "static",
+      "params": {
+        "call": "gettimeofday"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef71-497b-7c22-944d-358b1e2ef193",
+      "benchmark": "syscall",
+      "build": "static",
+      "params": {
+        "call": "getrusage"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef71-7e29-774f-b4d6-4b8fb10b77fe",
+      "benchmark": "syscall",
+      "build": "static",
+      "params": {
+        "call": "stat",
+        "path": "/tmp"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef71-ce0a-73de-829a-5168c2fffe18",
+      "benchmark": "hash",
+      "build": "static",
+      "params": {
+        "algorithm": "crc32",
+        "size_bytes": 64
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef72-0c51-7d0e-9cb8-1b63100e9627",
+      "benchmark": "hash",
+      "build": "static",
+      "params": {
+        "algorithm": "siphash",
+        "size_bytes": 64
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef72-4ed8-762e-a4fb-776a3b0c1c3f",
+      "benchmark": "hash",
+      "build": "static",
+      "params": {
+        "algorithm": "sha256",
+        "size_bytes": 64
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef72-a2e3-74ee-a853-bce31a9199d7",
+      "benchmark": "sort",
+      "build": "static",
+      "params": {
+        "size_bytes": 1048576
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef72-eda8-7ba6-9c1b-0fdb2e449c58",
+      "benchmark": "tcp_echo",
+      "build": "static",
+      "params": {
+        "size_bytes": 32768
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef73-3e2e-7aa2-942a-f7f7dc77e65b",
+      "benchmark": "mutex",
+      "build": "static",
+      "params": {
+        "threads": 1,
+        "placement": "one_cpu",
+        "critical_section_lines": 1,
+        "lock": "pthread_mutex_default",
+        "idle_threads": 0
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef73-84e7-7e72-8e75-11179edce63f",
+      "benchmark": "mutex",
+      "build": "static",
+      "params": {
+        "threads": 1,
+        "placement": "one_cpu",
+        "critical_section_lines": 1,
+        "lock": "pthread_mutex_default",
+        "idle_threads": 1
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef73-bfba-73a6-aa30-fc45226a32aa",
+      "benchmark": "mutex",
+      "build": "static",
+      "params": {
+        "threads": 2,
+        "placement": "distinct_cores",
+        "critical_section_lines": 1,
+        "lock": "pthread_mutex_default",
+        "idle_threads": 0
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef74-1bcc-7299-94c3-754e2ea7d456",
+      "benchmark": "mutex",
+      "build": "static",
+      "params": {
+        "threads": 2,
+        "placement": "distinct_cores",
+        "critical_section_lines": 8,
+        "lock": "pthread_mutex_default",
+        "idle_threads": 0
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef74-70e2-79be-8d2c-4d583fe46396",
+      "benchmark": "mutex",
+      "build": "static",
+      "params": {
+        "threads": 2,
+        "placement": "smt_siblings",
+        "critical_section_lines": 1,
+        "lock": "pthread_mutex_default",
+        "idle_threads": 0
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef74-cca1-7674-b35f-e9db54ba6bbd",
+      "benchmark": "disk_read_random",
+      "build": "static",
+      "params": {
+        "disk": "root_volume",
+        "dir": "/var/tmp/ledgermath/disk",
+        "request_bytes": 8192,
+        "span_bytes": 1073741824
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef75-09ae-7345-ac82-c2e0f89c1af5",
+      "benchmark": "disk_read_io_uring",
+      "build": "static",
+      "params": {
+        "disk": "root_volume",
+        "dir": "/var/tmp/ledgermath/disk",
+        "access": "sequential",
+        "request_bytes": 32768,
+        "queue_depth": 64,
+        "span_bytes": 1073741824
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef75-6a8a-7bad-bf67-d24a4a1daf4e",
+      "benchmark": "disk_read_io_uring",
+      "build": "static",
+      "params": {
+        "disk": "root_volume",
+        "dir": "/var/tmp/ledgermath/disk",
+        "access": "random",
+        "request_bytes": 4096,
+        "queue_depth": 64,
+        "span_bytes": 1073741824
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef75-ab78-79ca-8227-c6f17581b725",
+      "benchmark": "disk_read_sequential",
+      "build": "static",
+      "params": {
+        "disk": "root_volume",
+        "dir": "/var/tmp/ledgermath/disk",
+        "request_bytes": 8192,
+        "bytes_per_sample": 134217728,
+        "span_bytes": 1073741824
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef75-dc56-7559-af6a-6da8efeb01c7",
+      "benchmark": "disk_write",
+      "build": "static",
+      "params": {
+        "disk": "root_volume",
+        "dir": "/var/tmp/ledgermath/disk",
+        "request_bytes": 8192,
+        "sync": "none",
+        "file_bytes": 268435456
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef76-2df3-708a-bfff-d5f735b80487",
+      "benchmark": "disk_write",
+      "build": "static",
+      "params": {
+        "disk": "root_volume",
+        "dir": "/var/tmp/ledgermath/disk",
+        "request_bytes": 8192,
+        "sync": "fdatasync",
+        "file_bytes": 1073741824
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef77-2bf7-7a80-b936-a3ef85abee5a",
+      "benchmark": "http_get",
+      "build": "static",
+      "params": {
+        "object_bytes": 4096,
+        "key": "http_get/v1/4096",
+        "connection": "new",
+        "budget_seconds": 240,
+        "gap_mean_ms": 200,
+        "timeout_ms": 10000,
+        "ca_file": "/etc/pki/tls/certs/ca-bundle.crt",
+        "resolv_conf": "/etc/resolv.conf",
+        "auth": "sigv4"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef77-d143-73dd-9c30-47e84e4dc395",
+      "benchmark": "http_get",
+      "build": "static",
+      "params": {
+        "object_bytes": 4096,
+        "key": "http_get/v1/4096",
+        "connection": "reused",
+        "budget_seconds": 240,
+        "gap_mean_ms": 200,
+        "timeout_ms": 10000,
+        "ca_file": "/etc/pki/tls/certs/ca-bundle.crt",
+        "resolv_conf": "/etc/resolv.conf",
+        "auth": "sigv4"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef78-7158-792b-ac10-e3f95fbedf97",
+      "benchmark": "http_get",
+      "build": "static",
+      "params": {
+        "object_bytes": 131072,
+        "key": "http_get/v1/131072",
+        "connection": "new",
+        "budget_seconds": 240,
+        "gap_mean_ms": 200,
+        "timeout_ms": 10000,
+        "ca_file": "/etc/pki/tls/certs/ca-bundle.crt",
+        "resolv_conf": "/etc/resolv.conf",
+        "auth": "sigv4"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef79-187c-73a8-862d-9609c29ec57b",
+      "benchmark": "http_get",
+      "build": "static",
+      "params": {
+        "object_bytes": 131072,
+        "key": "http_get/v1/131072",
+        "connection": "reused",
+        "budget_seconds": 240,
+        "gap_mean_ms": 200,
+        "timeout_ms": 10000,
+        "ca_file": "/etc/pki/tls/certs/ca-bundle.crt",
+        "resolv_conf": "/etc/resolv.conf",
+        "auth": "sigv4"
+      },
+      "exit": {
+        "code": 0
+      }
+    },
+    {
+      "id": "01a1ef79-ba1d-7133-bcfc-9f12d66b2fc4",
+      "benchmark": "http_get",
+      "build": "static",
+      "params": {
+        "object_bytes": 16777216,
+        "key": "http_get/v1/16777216",
+        "connection": "new",
+        "budget_seconds": 120,
+        "gap_mean_ms": 200,
+        "timeout_ms": 10000,
+        "ca_file": "/etc/pki/tls/certs/ca-bundle.crt",
+        "resolv_conf": "/etc/resolv.conf",
+        "auth": "sigv4"
+      },
+      "exit": {
+        "code": 0
+      }
+    }
+  ],
+  "build_failures": [],
+  "not_run": [],
+  "left_out": [
+    {
+      "benchmark": "disk_read_random",
+      "build": "static",
+      "params": {
+        "disk": "instance_store",
+        "dir": "/mnt/lm/instance-store",
+        "request_bytes": 8192,
+        "span_bytes": 34359738368
+      },
+      "instance_types": [
+        "i4i.2xlarge"
+      ]
+    },
+    {
+      "benchmark": "disk_read_io_uring",
+      "build": "static",
+      "params": {
+        "disk": "instance_store",
+        "dir": "/mnt/lm/instance-store",
+        "access": "sequential",
+        "request_bytes": 32768,
+        "queue_depth": 64,
+        "span_bytes": 34359738368
+      },
+      "instance_types": [
+        "i4i.2xlarge"
+      ]
+    },
+    {
+      "benchmark": "disk_read_io_uring",
+      "build": "static",
+      "params": {
+        "disk": "instance_store",
+        "dir": "/mnt/lm/instance-store",
+        "access": "random",
+        "request_bytes": 4096,
+        "queue_depth": 64,
+        "span_bytes": 34359738368
+      },
+      "instance_types": [
+        "i4i.2xlarge"
+      ]
+    },
+    {
+      "benchmark": "disk_read_sequential",
+      "build": "static",
+      "params": {
+        "disk": "instance_store",
+        "dir": "/mnt/lm/instance-store",
+        "request_bytes": 8192,
+        "bytes_per_sample": 2147483648,
+        "span_bytes": 34359738368
+      },
+      "instance_types": [
+        "i4i.2xlarge"
+      ]
+    },
+    {
+      "benchmark": "disk_write",
+      "build": "static",
+      "params": {
+        "disk": "instance_store",
+        "dir": "/mnt/lm/instance-store",
+        "request_bytes": 8192,
+        "sync": "fdatasync",
+        "file_bytes": 1073741824
+      },
+      "instance_types": [
+        "i4i.2xlarge"
+      ]
+    }
+  ],
+  "services": {
+    "s3_fixtures": {
+      "role_session_name": "ledgermath-d544edad-270b-4abb-9de3-1bf7449b4077",
+      "asked_at": "2026-11-18T16:22:06.469170485Z",
+      "expires_at": "2026-11-18T17:22:06+00:00"
+    }
+  },
+  "ended_at": "2026-11-18T16:25:09.440298240Z"
+}
