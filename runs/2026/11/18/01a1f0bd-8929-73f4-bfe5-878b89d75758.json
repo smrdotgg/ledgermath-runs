@@ -1,0 +1,46 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1f0bd-8929-73f4-bfe5-878b89d75758",
+  "boot": "15ce4c33-8740-46c4-9f5d-71a9088dc46c",
+  "started_at": "2026-11-18T22:18:35.689548185Z",
+  "ended_at": "2026-11-18T22:18:55.030635323Z",
+  "benchmark": "mutex",
+  "params": {
+    "threads": 2,
+    "placement": "distinct_cores",
+    "critical_section_lines": 8,
+    "lock": "pthread_mutex_default",
+    "idle_threads": 0
+  },
+  "samples": 10,
+  "source_commit": "50db33a0a1e4ead1c08346cc6b5e18bced5176f1",
+  "source": "sha256:2907ae7db933d0715da4fe9330c66f7572235355da5e1728065e5560a861698a",
+  "binary": {
+    "blob": "sha256:ee0fc4b521c26497608d10ec3cd740204d001bfeab87fcc32deb2148ee5eca72",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/mutex mutex.c ../harness/c/lm.c ../harness/c/lm_event.c -pthread",
+    "resolved_flags": "sha256:5bca088f7256d311399c93b9f569b2340b770548beea3797ec4754adbcd12785"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "c6i.8xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-00835c753b2fcca9e"
+  },
+  "environment": {
+    "before": "sha256:cdebbd5b81895f07a8eb9d2ccbe728498c42841ad7a48241770ebb0e6ae60ce2",
+    "after": "sha256:bb97b99eca77b0cd9cd5f348b0046ef63d32bda8bc4ea03b2053800260f31dc6"
+  },
+  "runner": "sha256:5b3e1d9a5ffdf2e6ec2cafed38f3914da74b0760432f17bf479d897bd356b203",
+  "exit": {
+    "code": 0
+  },
+  "stdout": "sha256:d63cec5d8a63877f3afc285b94c447e23c2e5e096626d045007fd14b384b3c46",
+  "stdout_bytes": 4232,
+  "stdout_lines": 49,
+  "stderr": "sha256:b6e15924eb79c757fe13516c9554d99f97bac03b184873dc58d41c9530fae709"
+}
