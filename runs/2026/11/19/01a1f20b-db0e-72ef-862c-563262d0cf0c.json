@@ -1,0 +1,44 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1f20b-db0e-72ef-862c-563262d0cf0c",
+  "boot": "d8e2fac8-7fa2-45a1-ae50-0cda078a4f2e",
+  "started_at": "2026-11-19T04:23:45.678603162Z",
+  "ended_at": "2026-11-19T04:24:01.152999977Z",
+  "benchmark": "memory_read",
+  "params": {
+    "size_bytes": 1073741824,
+    "threads": "all",
+    "path": "avx2"
+  },
+  "samples": 10,
+  "source_commit": "50db33a0a1e4ead1c08346cc6b5e18bced5176f1",
+  "source": "sha256:2907ae7db933d0715da4fe9330c66f7572235355da5e1728065e5560a861698a",
+  "binary": {
+    "blob": "sha256:184aff50cde3c2f6fda3dea2790357c276be4ff1949f4f0cb36f2583c0f5e5b5",
+    "build": "dynamic",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/dynamic\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE  -I../harness/c -o build/dynamic/memory_read memory_read.c ../harness/c/lm.c -pthread",
+    "resolved_flags": "sha256:31d5e25f592533c25124e913ee13449f1309e20943cd6876c69438f3d64dd4dc"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "m5.large",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-03af23f22f5063559"
+  },
+  "environment": {
+    "before": "sha256:9e4180b4d848a38b340ee0deffab873200bf1b01dd2719edae3a20e8f698fff7",
+    "after": "sha256:536fbe39943d3680cf9f465cdc9c6695fe5831a519ff3cf21c7b197a1ab67cc4"
+  },
+  "runner": "sha256:5b3e1d9a5ffdf2e6ec2cafed38f3914da74b0760432f17bf479d897bd356b203",
+  "exit": {
+    "code": 0
+  },
+  "stdout": "sha256:31e75edf034675259a24788b14b9b04578dccc23d500c879d7d94ad0f2bae619",
+  "stdout_bytes": 2648,
+  "stdout_lines": 36,
+  "stderr": "sha256:77deb4ce166512452b80375839eb97e3eb4346694cd60f710731fcbc5a8916ec"
+}
