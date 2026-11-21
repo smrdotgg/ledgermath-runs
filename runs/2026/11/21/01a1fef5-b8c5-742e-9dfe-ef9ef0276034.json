@@ -1,0 +1,62 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a1fef5-b8c5-742e-9dfe-ef9ef0276034",
+  "boot": "1e8e402d-46a1-4825-b88f-200811e9f7c6",
+  "started_at": "2026-11-21T16:34:38.917519412Z",
+  "ended_at": "2026-11-21T16:35:18.939064980Z",
+  "benchmark": "http_get",
+  "params": {
+    "object_bytes": 4096,
+    "key": "http_get/v1/4096",
+    "connection": "reused",
+    "budget_seconds": 240,
+    "gap_mean_ms": 200,
+    "timeout_ms": 10000,
+    "ca_file": "/etc/pki/tls/certs/ca-bundle.crt",
+    "resolv_conf": "/etc/resolv.conf",
+    "auth": "sigv4"
+  },
+  "samples": 200,
+  "service": {
+    "name": "s3_fixtures",
+    "inputs": {
+      "endpoint": "https://ledgermath-production-runs-fixturesbucketbucket-zkntsvnz.s3.us-east-2.amazonaws.com",
+      "region": "us-east-2"
+    },
+    "secret_inputs": [
+      "aws_access_key_id",
+      "aws_secret_access_key",
+      "aws_session_token"
+    ]
+  },
+  "source_commit": "e3b539e92839a78fddeb77b6469a3cf3feb1ef11",
+  "source": "sha256:94593cb38ec0af30750a65a43c9d0261f2d42e625638befac50650d7867a784c",
+  "binary": {
+    "blob": "sha256:7a46cca0dca68523c5bf0bee93dc56abf2dd40d8de5d83ec1a93b623ff19daaf",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "aws-lc: the source archive /var/tmp/ledgermath/aws-lc-8895a9d2434e875e009e652a1015f9c2c275261634c7132253ca5aa60d266888.tar.gz has the pinned sha256 8895a9d2434e875e009e652a1015f9c2c275261634c7132253ca5aa60d266888\naws-lc: cmake -S /var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/src -B /var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/build -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DDISABLE_GO=ON -DDISABLE_PERL=ON -DBUILD_TESTING=OFF -DBUILD_TOOL=OFF -DENABLE_CRYPTO_POLICIES=OFF -DCMAKE_C_COMPILER=cc -DCMAKE_CXX_COMPILER=g++ -DCMAKE_C_FLAGS='-ffile-prefix-map=/var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/src=aws-lc-5.14.0 -ffile-prefix-map=/var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/build=build' -DCMAKE_CXX_FLAGS='-ffile-prefix-map=/var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/src=aws-lc-5.14.0 -ffile-prefix-map=/var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/build=build'\naws-lc: cmake --build /var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/build --target crypto ssl -j 2\naws-lc: configured in 2 s, built in 113 s; the log is /var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/build.log\naws-lc:   version 5.14.0\naws-lc:   archive sha256 8895a9d2434e875e009e652a1015f9c2c275261634c7132253ca5aa60d266888\naws-lc:   cmake flags -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF -DDISABLE_GO=ON -DDISABLE_PERL=ON -DBUILD_TESTING=OFF -DBUILD_TOOL=OFF -DENABLE_CRYPTO_POLICIES=OFF\naws-lc:   c and c++ flags -ffile-prefix-map=/var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/src=aws-lc-5.14.0 -ffile-prefix-map=/var/tmp/ledgermath/src/benchmarks/http_get/build/aws-lc/build=build\naws-lc:   targets crypto ssl\naws-lc:   cc cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)\naws-lc:   c++ g++ (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)\naws-lc:   cmake version 3.22.2\nmkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -Ibuild/aws-lc/src/include -DLM_AWS_LC_VERSION='\"5.14.0\"' -DLM_AWS_LC_SHA256='\"8895a9d2434e875e009e652a1015f9c2c275261634c7132253ca5aa60d266888\"' -o build/static/http_get http_get.c ../harness/c/lm.c ../harness/c/lm_lines.c ../harness/c/lm_dns.c ../harness/c/lm_http.c ../harness/c/lm_sigv4.c ../harness/c/lm_tls.c build/aws-lc/build/ssl/libssl.a build/aws-lc/build/crypto/libcrypto.a -lm -pthread\n/usr/bin/ld: build/aws-lc/build/crypto/libcrypto.a(socket_helper.c.o): in function `bio_ip_and_port_to_socket_and_addr':\nsocket_helper.c:(.text.bio_ip_and_port_to_socket_and_addr+0x50): warning: Using 'getaddrinfo' in statically linked applications requires at runtime the shared libraries from the glibc version used for linking",
+    "resolved_flags": "sha256:31d5e25f592533c25124e913ee13449f1309e20943cd6876c69438f3d64dd4dc"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "m5.large",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-0373e6d473e5a5d3f"
+  },
+  "environment": {
+    "before": "sha256:3c7a17c5a5b120b657c65a331c2c3e3d9d7834cdc042f8c82971caa3efd45e46",
+    "after": "sha256:ccc9f2903d9e0df97a12882badbec36a80f613573c7444e11454d6ae2689bfa8"
+  },
+  "runner": "sha256:5b3e1d9a5ffdf2e6ec2cafed38f3914da74b0760432f17bf479d897bd356b203",
+  "exit": {
+    "code": 0
+  },
+  "stdout": "sha256:c600b7ba6302426073d9c42c3e10bcf056d6e3f811a224b8498058cc4907e67b",
+  "stdout_bytes": 436429,
+  "stdout_lines": 1226,
+  "stderr": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
