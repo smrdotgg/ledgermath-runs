@@ -1,0 +1,47 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a20810-aed8-7e20-a787-b8674bc859cc",
+  "boot": "9f548f54-d5e3-43b6-b470-66501fcc931a",
+  "started_at": "2026-11-23T11:00:40.792696592Z",
+  "ended_at": "2026-11-23T11:01:04.427803033Z",
+  "benchmark": "disk_read_io_uring",
+  "params": {
+    "disk": "root_volume",
+    "dir": "/var/tmp/ledgermath/disk",
+    "access": "sequential",
+    "request_bytes": 32768,
+    "queue_depth": 64,
+    "span_bytes": 1073741824
+  },
+  "samples": 10,
+  "source_commit": "e3b539e92839a78fddeb77b6469a3cf3feb1ef11",
+  "source": "sha256:94593cb38ec0af30750a65a43c9d0261f2d42e625638befac50650d7867a784c",
+  "binary": {
+    "blob": "sha256:1b749fc14aaca77de244f1f0b79499cf2d69ee2ac56e13da032efb0bfcc07ba5",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/disk_read_io_uring disk_read_io_uring.c ../harness/c/lm.c ../harness/c/lm_event.c ../harness/c/lm_disk.c",
+    "resolved_flags": "sha256:5bca088f7256d311399c93b9f569b2340b770548beea3797ec4754adbcd12785"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "i4i.2xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-075e2e5ad5eed34a2"
+  },
+  "environment": {
+    "before": "sha256:3d34755e58e64a0aeded1425cc04aadef64115bce6d10b6e69f7e3daa7701e2b",
+    "after": "sha256:0aa76eec89d36b8d6e94cf998586c80f7d2158c84bb886bd4bc961c3216a3e7d"
+  },
+  "runner": "sha256:5b3e1d9a5ffdf2e6ec2cafed38f3914da74b0760432f17bf479d897bd356b203",
+  "exit": {
+    "code": 0
+  },
+  "stdout": "sha256:5ab120080d12278412aaf84924cc3c6dc61fb0ee5a779012ce062d9784852638",
+  "stdout_bytes": 6776,
+  "stdout_lines": 56,
+  "stderr": "sha256:3707766c5a72fa53ae381961a4b50534fe8f2419e61d1c57df83c7ae15c30c0d"
+}
