@@ -1,0 +1,46 @@
+{
+  "schema": "ledgermath.run/1",
+  "id": "01a21a19-c2ce-722d-a25a-ece3876f7c93",
+  "boot": "c402a043-0c4b-4722-b620-134303fd33df",
+  "started_at": "2026-11-26T23:03:45.614091572Z",
+  "ended_at": "2026-11-26T23:03:58.169849961Z",
+  "benchmark": "disk_write",
+  "params": {
+    "disk": "instance_store",
+    "dir": "/mnt/lm/instance-store",
+    "request_bytes": 8192,
+    "sync": "fdatasync",
+    "file_bytes": 1073741824
+  },
+  "samples": 10,
+  "source_commit": "b156710f5a7483889d44e3b26584edfd680b0e12",
+  "source": "sha256:223fe5f9b0a0f812b83856a2aa4b399de6c2baab2f7a57458ecc4c7db051f81b",
+  "binary": {
+    "blob": "sha256:dae8af9ea5c7321bfceef22dfe82659010d33b49e24e0367c5c7b6af6874bb8b",
+    "build": "static",
+    "compiler": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+    "command": "mkdir -p build/static\ncc -O3 -march=native -std=c11 -Wall -Wextra -D_GNU_SOURCE -static -I../harness/c -o build/static/disk_write disk_write.c ../harness/c/lm.c ../harness/c/lm_event.c ../harness/c/lm_disk.c",
+    "resolved_flags": "sha256:5bca088f7256d311399c93b9f569b2340b770548beea3797ec4754adbcd12785"
+  },
+  "provider": {
+    "name": "aws",
+    "instance_type": "i4i.2xlarge",
+    "region": "us-east-2",
+    "availability_zone": "us-east-2c",
+    "availability_zone_id": "use2-az3",
+    "image_id": "ami-03499a87bbb39a09a",
+    "instance_id": "i-073fd955513cafead"
+  },
+  "environment": {
+    "before": "sha256:3020326121800cf886db24a91068ddb07e2e66360dcb101a665da095bf44cec1",
+    "after": "sha256:b4e76b56925df20df88521303d141f6975348ff6d515a3dd6f6788d74d8e7ac6"
+  },
+  "runner": "sha256:5b3e1d9a5ffdf2e6ec2cafed38f3914da74b0760432f17bf479d897bd356b203",
+  "exit": {
+    "code": 0
+  },
+  "stdout": "sha256:ac0919dc31a5fbf3d43f5011280e87aab035f58ac1c1c4037dfc4719eaa05ed3",
+  "stdout_bytes": 6281,
+  "stdout_lines": 60,
+  "stderr": "sha256:15ccf0783bc5e8df2ea0a145aaaa0822ef282b20d1756f8f189577b99ccdc527"
+}
