@@ -50,10 +50,9 @@ One reasonable way, for one Run, is:
 > https://creativecommons.org/licenses/by/4.0/
 
 with a word saying whether what you show was computed from the Runs or changed. For a figure
-computed from many Runs, the source repository's lookup tool (`scripts/lookup.ts`) prints a
-citation beside every number, naming the Series, the Method version and the moment, with the
-Run files behind it; for a price, it names the file, SKU and rate code. Its README's section
-"The agent skill" gives the forms.
+computed from many Runs, LedgerMath's documentation, <https://ledgermath.com/docs/>, says in
+its section "What a citation names" how to name the Series, the Method and the moment; for a
+price, the file, SKU and rate code.
 
 ## What the licence does not cover
 
